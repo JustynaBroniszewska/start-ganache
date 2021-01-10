@@ -1,0 +1,17 @@
+{
+  "name": "start-ganache",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "ethers": "^5.0.24",
+    "ganache-cli": "^6.12.1"
+  },
+  "scripts": {
+    "build": "tsc --build ./tsconfig.json"
+  },
+  "devDependencies": {
+    "typescript": "^4.1.3"
+  }
+}
