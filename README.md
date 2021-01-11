@@ -1,6 +1,6 @@
 **Start Ganache**
 
-Simple tool for starting own Ethereum network symulator.
+Simple tool for starting own Ethereum network simulator.
 
 ```ts
 import { startGanache, privateKeys } from 'start-ganache'
