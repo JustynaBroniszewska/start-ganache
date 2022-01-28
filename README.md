@@ -3,8 +3,9 @@
 Simple tool for starting own Ethereum network simulator.
 
 ```ts
-import { startGanache, privateKeys } from 'start-ganache'
+import { startGanache, privateKeys, Multicall } from 'start-ganache'
 import { Wallet, constants } from 'ethers'
+import { deployContract } from 'ethereum-waffle'
 
 
 async function main() {
@@ -14,6 +15,7 @@ async function main() {
 
     const wallet = new Wallet(privateKeys[0], provider)
     await wallet.sendTransaction({ to: constants.AddressZero })
+    const multicall = await deployContract(wallet, Multicall, [])
 }
 main()
 
