@@ -8,12 +8,13 @@ import { Wallet, constants } from 'ethers'
 
 
 async function main() {
-    const port = 1845
+    const port = 8545
     
     const provider = await startGanache(port)
 
     const wallet = new Wallet(privateKeys[0], provider)
     await wallet.sendTransaction({ to: constants.AddressZero })
 }
+main()
 
 ```
